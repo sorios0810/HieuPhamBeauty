@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>flexed</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    @Styles.Render("~/Content/css/landingpage")
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- awesome fontfamily -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    @*@Styles.Render("~/Content/css")*@
+    @*@Scripts.Render("~/bundles/modernizr")*@
+</head>
+<body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="../../Content/img/loading.gif" alt="" /></div>
+    </div>
+    <!-- end loader -->
+
+    <div class="wrapper">
+        <div id="content">
+            @Html.Partial("_HeaderPartial")
+            @RenderBody()
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <p>&copy; @DateTime.Now.Year Flexed Design by<a href="https://html.design/"> Free Html Template</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- end footer -->
+    <div class="overlay"></div>
+
+    <!-- Javascript files-->
+    <script src="../../Scripts/landingpage/jquery.min.js"></script>
+    <script src="../../Scripts/landingpage/popper.min.js"></script>
+    <script src="../../Scripts/landingpage/bootstrap.bundle.min.js"></script>
+    <script src="../../Scripts/landingpage/owl.carousel.min.js"></script>
+    <script src="../../Scripts/landingpage/custom.js"></script>
+    <script src="../../Scripts/landingpage/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../Scripts/landingpage/jquery.nicescroll.min.js"></script>
+    <script src="../../Scripts/landingpage/jquery-sticky.js"></script>
+    @*<script src="../../Scripts/landingpage/jquery.nice-select.js"></script>*@
+    <script src="../../Scripts/landingpage/jquery.meanmenu.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js" integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../../Scripts/landingpage/jquery.fancybox.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="../../Scripts/landingpage/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+
+    <script>
+        // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+        // Australia.
+        function initMap() {
+            //    var map = new google.maps.Map(document.getElementById('map'), {
+            //        zoom: 11,
+            //        center: {
+            //            lat: 40.645037,
+            //            lng: -73.880224
+            //        },
+            //    });
+
+            //    var image = '../../Content/img/maps-and-flags.png';
+            //    var beachMarker = new google.maps.Marker({
+            //        position: {
+            //            lat: 40.645037,
+            //            lng: -73.880224
+            //        },
+            //        map: map,
+            //        icon: image
+            //    });
+        }
+    </script>
+    <!-- google map js -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+    <!-- end google map js -->
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>
