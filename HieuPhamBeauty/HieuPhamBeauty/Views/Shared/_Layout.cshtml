@@ -33,21 +33,8 @@
             @RenderBody()
         </div>
     </div>
-
-    <footer>
-        <div class="footer">
-            <div class="copyright">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                            <p>&copy; @DateTime.Now.Year Flexed Design by<a href="https://html.design/"> Free Html Template</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    @Html.Partial("_FooterPartial")
+    @Html.Partial("_DialogRegisterService")
     <!-- end footer -->
     <div class="overlay"></div>
 
@@ -88,35 +75,6 @@
             });
         });
     </script>
-
-    <script>
-        // This example adds a marker to indicate the position of Bondi Beach in Sydney,
-        // Australia.
-        function initMap() {
-            //    var map = new google.maps.Map(document.getElementById('map'), {
-            //        zoom: 11,
-            //        center: {
-            //            lat: 40.645037,
-            //            lng: -73.880224
-            //        },
-            //    });
-
-            //    var image = '../../Content/img/maps-and-flags.png';
-            //    var beachMarker = new google.maps.Marker({
-            //        position: {
-            //            lat: 40.645037,
-            //            lng: -73.880224
-            //        },
-            //        map: map,
-            //        icon: image
-            //    });
-        }
-    </script>
-    <!-- google map js -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
-    <!-- end google map js -->
-    @*@Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")*@
     @RenderSection("scripts", required: false)
 </body>
 </html>

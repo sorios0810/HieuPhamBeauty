@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "_DialogRegisterService";
+}
+
+<div class="modal" id="dialogRegService" tabindex="-1" role="dialog" aria-labelledby="dialogRegService" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <form class="main_form form_service">
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <input class="form-control" placeholder="Họ tên" type="text" name="Name">
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <input class="form-control" placeholder="Điện thoại" type="text" name="Phone">
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <select name="" id="service" class="form-control">
+                                        <option value="">Dịch vụ cần làm</option>
+                                        <option value="1">Test 1</option>
+                                        <option value="2">Test 2</option>
+                                        <option value="3">Test 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <button class="send">Đăng ký</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-6 img_reg_service">
+                        <img src="../../Content/img/banner-1.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

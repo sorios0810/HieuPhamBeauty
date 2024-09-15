@@ -1,4 +1,4 @@
-/*---------------------------------------------------------------------
+﻿/*---------------------------------------------------------------------
     File Name: custom.js
 ---------------------------------------------------------------------*/
 
@@ -319,5 +319,91 @@ $(function () {
 		interval: 5000
 	});
 
-	$('#siteAbout').height($(window).outerHeight())
+	renderBoxList(data, '#listbox');
+	ShowPopupRegService()
+	$('.img_reg_service img').height(($('#dialogRegService').outerHeight() - 100))
+	
 });
+
+function ShowPopupRegService() {
+	var modal = document.getElementById("dialogRegService");
+	$('#dialogRegService').show()
+
+	window.onclick = function (event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+}
+
+const data = [
+	{
+		image: "../../Content/img/sample.jpg",
+		title: "Nâng cơ xóa nhăn mắt"
+	},
+	{
+		image: "../../Content/img/sample.jpg",
+		title: "Nâng cơ xóa nhăn mắt"
+	},
+	{
+		image: "../../Content/img/sample.jpg",
+		title: "Nâng cơ xóa nhăn mắt"
+	},
+	{
+		image: "../../Content/img/sample.jpg",
+		title: "Nâng cơ xóa nhăn mắt"
+	},
+	{
+		image: "../../Content/img/sample.jpg",
+		title: "Nâng cơ xóa nhăn mắt"
+	},
+	{
+		image: "../../Content/img/sample.jpg",
+		title: "Nâng cơ xóa nhăn mắt"
+	},
+	{
+		image: "../../Content/img/sample.jpg",
+		title: "Nâng cơ xóa nhăn mắt"
+	},
+	{
+		image: "../../Content/img/sample.jpg",
+		title: "Nâng cơ xóa nhăn mắt"
+	}
+];
+
+function renderBoxList(data, containerSelector) {
+	const container = document.querySelector(containerSelector);
+	container.innerHTML = '';
+
+	// Lặp qua từng item trong data và tạo HTML
+	data.forEach(item => {
+		// Tạo div.box
+		const box = document.createElement('div');
+		box.classList.add('box');
+
+		// Tạo div.image-container và img
+		const imageContainer = document.createElement('div');
+		imageContainer.classList.add('image-container');
+		const img = document.createElement('img');
+		img.src = item.image;
+		imageContainer.appendChild(img);
+
+		// Tạo div.title và h4
+		const titleContainer = document.createElement('div');
+		titleContainer.classList.add('title');
+		const h4 = document.createElement('h4');
+		h4.classList.add('name_service');
+		h4.textContent = item.title;
+		titleContainer.appendChild(h4);
+
+		// Gắn imageContainer và titleContainer vào box
+		box.appendChild(imageContainer);
+		box.appendChild(titleContainer);
+		box.onclick = function () {
+			ShowPopupRegService()
+		};
+
+		// Gắn box vào container
+		container.appendChild(box);
+	});
+}

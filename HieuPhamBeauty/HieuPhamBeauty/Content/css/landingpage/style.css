@@ -1256,64 +1256,8 @@ ul.social_icon li a:hover {
     color: #fff;
 }
 
-@media (max-width: 1200px) {
-    .flex-box {
-        flex: 1 1 calc(33.33% - 16px);
-        width: 85px;
-    }
-}
-
-@media (max-width: 768px) {
-    .flex-box {
-        flex: 1 1 calc(40% - 16px);
-    }
-}
-
-@media (min-width: 768px) {
-    .col-banner {
-        max-width: 66% !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .flex-box {
-        flex: 1 1 40%;
-    }
-}
-
-@media (min-width: 375px) {
-    .flex-box .bottom-line {
-        bottom: 30%;
-    }
-}
-
 .bg-1 {
     background-image: url('../../img/bg-1.jpg')
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-    .form_service {
-        padding-left: 30px;
-        width: 460px;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 767px) {
-    .form_service {
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 575px) {
-    .form_service {
-        margin-top: 10px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .form_service {
-        margin-top: 10px;
-    }
 }
 
 .list-box-container {
@@ -1323,9 +1267,12 @@ ul.social_icon li a:hover {
     padding: 20px;
 }
 
-.box {
+.box
+{
+    flex: 0 0 calc(25% - 60px); /* Mỗi box chiếm 25% chiều rộng trừ khoảng cách giữa các box */
+    box-sizing: border-box;
     background-color: #4cafaf;
-    width: 200px;
+    width: 170px;
     height: 270px;
     margin: 10px;
     border-radius: 25px;
@@ -1427,4 +1374,192 @@ ul.social_icon li a:hover {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.bg-user {
+    position: relative;
+    max-width: 300px;
+    padding: 10px;
+}
+
+.yellow-background
+{
+    position: absolute;
+    top: 20px;
+    left: 35px;
+    width: 90%;
+    height: 95%;
+    background-color: #ffc107;
+    z-index: -1;
+}
+
+.about-us
+{
+    margin-top: 12em;
+}
+
+.content_about_us p {
+    font-size: 25px !important;
+    line-height: 34px !important;
+    padding: 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.section-header h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.line-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -10px;
+}
+
+.line-container img {
+    width: 40px;
+    height: 40px;
+}
+
+.line
+{
+    width: 140px;
+    height: 2px;
+    background-color: black;
+    margin: 0 10px;
+}
+
+.doctor-advice {
+    margin-bottom: 30px;
+}
+
+@media (min-width: 576px)
+{
+    #dialogRegService .modal-dialog
+    {
+        max-width: 800px;
+        margin: 1.75rem auto;
+    }
+}
+
+.close_btn
+{
+    display: flex;
+    justify-content: right;
+}
+
+@media (max-width: 1200px)
+{
+    .flex-box
+    {
+        flex: 1 1 calc(33.33% - 16px);
+        width: 85px;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .flex-box
+    {
+        flex: 1 1 calc(40% - 16px);
+    }
+
+    .box
+    {
+        flex: 0 0 calc(40% - 16px);
+    }
+
+    .img_reg_service
+    {
+        display: none
+    }
+}
+
+@media (max-width: 480px)
+{
+    .flex-box
+    {
+        flex: 1 1 40%;
+    }
+}
+
+@media (min-width: 375px)
+{
+    .flex-box .bottom-line
+    {
+        bottom: 30%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px)
+{
+    #dialogRegService .main_form
+    {
+         padding-left: 30px; 
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px)
+{
+    .form_service
+    {
+        padding-left: 30px;
+        width: 460px;
+    }
+
+    #dialogRegService .col-xl-6
+    {
+        width: 50%
+    }
+
+    #dialogRegService .form_service
+    {
+        width: 390px;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 767px)
+{
+    .form_service
+    {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 575px)
+{
+    .form_service
+    {
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px)
+{
+    .form_service
+    {
+        margin-top: 10px;
+    }
+
+    .col-banner
+    {
+        max-width: 66% !important;
+    }
+
+    .box
+    {
+        flex: 0 0 calc(40% - 16px);
+    }
+
+    #dialogRegService .col-xl-6
+    {
+        width: 50%
+    }
 }

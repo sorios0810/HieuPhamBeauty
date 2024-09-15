@@ -20,7 +20,7 @@ namespace HieuPhamBeauty.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Book()
         {
             ViewBag.Message = "Your contact page.";
 
