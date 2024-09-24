@@ -1299,6 +1299,9 @@ ul.social_icon li a:hover {
     right: -35px;
 }
 
+.item-service {
+    width: 250px;
+}
 .image-container {
     padding: 10px;
 }

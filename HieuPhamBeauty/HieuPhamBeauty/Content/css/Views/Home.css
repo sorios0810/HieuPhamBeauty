@@ -1,0 +1,160 @@
+﻿
+.product-item .inner-content::before,
+.product-item .inner-content::after
+{
+    content: '';
+    position: absolute;
+    bottom: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.product-item .inner-content::before
+{
+    left: -35px;
+}
+
+.product-item .inner-content::after
+{
+    right: -35px;
+}
+
+.item-service .owl-stage
+{
+    display: flex;
+    justify-content: center;
+}
+
+.logo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-name
+{
+    /*text-transform: uppercase;*/
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.div_RegService
+{
+    display: flex;
+    justify-content: center;
+}
+
+.regService
+{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+
+.regService .personal-register
+{
+    padding-left: 24px;
+}
+
+.regService-form .form-group
+{
+    margin-bottom: 20px;
+}
+
+.btn-regService
+{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-regService .btn-submit
+{
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 300;
+    border: none;
+    line-height: 25px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    background: #0f0f0f;
+    color: #fff;
+    margin-top: 2px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+
+.btn-regService .btn-submit:hover
+{
+    background-color: #FBB304;
+}
+
+.regService-form .form-group .form-control
+{
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #0f0f0f;
+    font-size: 14px;
+    font-weight: 300;
+    height: 35px;
+    padding: 5px 16px;
+    width: 400px;
+}
+
+.regService-form .form-control::-webkit-input-placeholder
+{ /* Chrome/Opera/Safari */
+    color: #0f0f0f;
+}
+
+.regService-form .form-control::-moz-placeholder
+{ /* Firefox 19+ */
+    color: #0f0f0f;
+}
+
+.regService-form.form-control:-ms-input-placeholder
+{ /* IE 10+ */
+    color: #0f0f0f;
+}
+
+.regService-form .form-control:-moz-placeholder
+{ /* Firefox 18- */
+    color: #0f0f0f;
+}
+
+.regService-form .form-group select.form-control
+{
+    color: #0f0f0f;
+    font-size: 13px;
+    padding-top: 6px;
+}
+
+.frm-control {
+    width: 370px !important;
+}
+
+@media only screen and (min-width: 1199px)
+{
+    .item-service .owl-item
+    {
+        width: 300px !important;
+        padding-left: 30px;
+    }
+}
+
+@media only screen and (min-width: 640px)
+{
+    .item-service .owl-item
+    {
+        padding: 10px;
+    }
+}

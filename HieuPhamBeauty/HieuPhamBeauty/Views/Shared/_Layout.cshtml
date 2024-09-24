@@ -8,73 +8,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>flexed</title>
+    <title>Hiếu Phạm Beauty & Acedamny</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
-    @Styles.Render("~/Content/css/landingpage")
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
-    <!-- awesome fontfamily -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    @*@Styles.Render("~/Content/css")*@
-    @*@Scripts.Render("~/bundles/modernizr")*@
+    <!--== Favicon ==-->
+    <link rel="shortcut icon" href="../../Content/img/favicon.ico" type="image/x-icon" />
+
+    <!--== Google Fonts ==-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    @Styles.Render("~/Content/css/lib")
+    <!--== Main Style CSS ==-->
+    <link href="../../Content/css/style.css" rel="stylesheet" />
 </head>
-<body class="main-layout">
-    <!-- loader  -->
-    <div class="loader_bg">
-        <div class="loader"><img src="../../Content/img/loading.gif" alt="" /></div>
-    </div>
-    <!-- end loader -->
 
-    <div class="wrapper">
-        <div id="content">
-            @Html.Partial("_HeaderPartial")
-            @RenderBody()
+<body>
+    <!--wrapper start-->
+    <div class="wrapper home-default-wrapper">
+        <!--== Start Preloader Content ==-->
+        <div class="preloader-wrap">
+            <div class="preloader">
+                <span class="dot"></span>
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
+        <!--== End Preloader Content ==-->
+        @Html.Partial("_HeaderPartial")
+        @RenderBody()
+        @Html.Partial("_FooterPartial")
+        <!--== Scroll Top Button ==-->
+        <div id="scroll-to-top" class="scroll-to-top"><span class="ion-md-arrow-up"></span></div>
+
+        <!--== Start Side Menu ==-->
+        <aside class="off-canvas-wrapper">
+            <div class="off-canvas-inner">
+                <div class="off-canvas-overlay"></div>
+                <!-- Start Off Canvas Content Wrapper -->
+                <div class="off-canvas-content">
+                    <!-- Off Canvas Header -->
+                    <div class="off-canvas-header">
+                        <div class="close-action">
+                            <button class="btn-menu-close">menu<i class="icon-arrow-left"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="off-canvas-item">
+                        <!-- Start Mobile Menu Wrapper -->
+                        <div class="res-mobile-menu menu-active-one">
+                            <!-- Note Content Auto Generate By Jquery From Main Menu -->
+                        </div>
+                        <!-- End Mobile Menu Wrapper -->
+                    </div>
+                </div>
+                <!-- End Off Canvas Content Wrapper -->
+            </div>
+        </aside>
+        <!--== End Side Menu ==-->
     </div>
-    @Html.Partial("_FooterPartial")
-    @Html.Partial("_DialogRegisterService")
-    <!-- end footer -->
-    <div class="overlay"></div>
 
-    <!-- Javascript files-->
-    <script src="../../Scripts/landingpage/jquery.min.js"></script>
-    <script src="../../Scripts/landingpage/popper.min.js"></script>
-    <script src="../../Scripts/landingpage/bootstrap.bundle.min.js"></script>
-    <script src="../../Scripts/landingpage/owl.carousel.min.js"></script>
-    <script src="../../Scripts/landingpage/custom.js"></script>
-    <script src="../../Scripts/landingpage/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../../Scripts/landingpage/jquery.nicescroll.min.js"></script>
-    <script src="../../Scripts/landingpage/jquery-sticky.js"></script>
-    @*<script src="../../Scripts/landingpage/jquery.nice-select.js"></script>*@
-    <script src="../../Scripts/landingpage/jquery.meanmenu.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js" integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="../../Scripts/landingpage/jquery.fancybox.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!--=======================Javascript============================-->
+    <!--=== Modernizr Min Js ===-->
+    <script src="../../Scripts/lib/modernizr.js"></script>
+    <!--=== jQuery Min Js ===-->
+    <script src="../../Scripts/lib/jquery-main.js"></script>
+    <!--=== jQuery Migration Min Js ===-->
+    <script src="../../Scripts/lib/jquery-migrate.js"></script>
+    <!--=== Bootstrap Min Js ===-->
+    <script src="../../Scripts/lib/bootstrap.min.js"></script>
+    <!--=== jQuery Appear Js ===-->
+    <script src="../../Scripts/lib/jquery.appear.js"></script>
+    <!--=== jQuery Swiper Min Js ===-->
+    <script src="../../Scripts/lib/swiper.min.js"></script>
+    <!--=== jQuery Fancy Box Min Js ===-->
+    <script src="../../Scripts/lib/fancybox.min.js"></script>
+    <!--=== jQuery Slick Nav Js ===-->
+    <script src="../../Scripts/lib/slicknav.js"></script>
+    <!--=== jQuery Waypoints Js ===-->
+    <script src="../../Scripts/lib/waypoints.js"></script>
+    <!--=== jQuery Owl Carousel Min Js ===-->
+    <script src="../../Scripts/lib/owlcarousel.min.js"></script>
+    <!--=== jQuery Match Height Min Js ===-->
+    <script src="../../Scripts/lib/jquery-match-height.min.js"></script>
+    <!--=== jQuery Zoom Min Js ===-->
+    <script src="../../Scripts/lib/jquery-zoom.min.js"></script>
+    <!--=== Countdown Js ===-->
+    <script src="../../Scripts/lib/countdown.js"></script>
 
-    <script src="../../Scripts/landingpage/jquery-3.0.0.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#sidebar").mCustomScrollbar({
-                theme: "minimal"
-            });
+    <!--=== Custom Js ===-->
+    <script src="../../Scripts/custom.js"></script>
 
-            $('#dismiss, .overlay').on('click', function () {
-                $('#sidebar').removeClass('active');
-                $('.overlay').removeClass('active');
-            });
-
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').addClass('active');
-                $('.overlay').addClass('active');
-                $('.collapse.in').toggleClass('in');
-                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-            });
-        });
-    </script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
