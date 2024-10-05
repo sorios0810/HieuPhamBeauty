@@ -98,17 +98,21 @@
 
 .regService-form .form-group .form-control
 {
-    background-color: #fff;
-    border: 1px solid #ebebeb;
-    border-radius: 0;
+    border: 1px solid #e7e2dc;
     -webkit-box-shadow: none;
     box-shadow: none;
-    color: #0f0f0f;
-    font-size: 14px;
-    font-weight: 300;
-    height: 35px;
-    padding: 5px 16px;
-    width: 400px;
+    border-radius: 0;
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+    height: 40px;
+    line-height: 20px;
+    padding: 8px 24px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
 }
 
 .regService-form .form-control::-webkit-input-placeholder

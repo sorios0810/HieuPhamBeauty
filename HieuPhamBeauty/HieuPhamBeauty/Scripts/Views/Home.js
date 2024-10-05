@@ -57,6 +57,135 @@
     },
 ];
 
+function ProductSlider() {
+    // Image Slider Js
+    var product = $(".images-col3-slider");
+    product.owlCarousel({
+        autoplay: false,
+        smartSpeed: 1000,
+        nav: false,
+        dots: false,
+        margin: 30,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            540: {
+                items: 2,
+                margin: 15,
+            },
+            576: {
+                items: 2,
+                margin: 15,
+            },
+            768: {
+                items: 3,
+            },
+            992: {
+                items: 3,
+            },
+            1200: {
+                items: 3,
+            }
+        }
+    });
+
+    // Product Slider Js
+    var product = $(".product-slider");
+    product.owlCarousel({
+        autoplay: false,
+        smartSpeed: 1000,
+        nav: true,
+        dots: false,
+        margin: 0,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            540: {
+                items: 2,
+            },
+            576: {
+                items: 2,
+            },
+            768: {
+                items: 3,
+            },
+            992: {
+                items: 3,
+            },
+            1200: {
+                items: 4,
+            }
+        }
+    });
+
+    // Product Col2 Slider Js
+    var product = $(".product-col2-slider");
+    product.owlCarousel({
+        autoplay: false,
+        smartSpeed: 1000,
+        nav: true,
+        dots: false,
+        margin: 0,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            540: {
+                items: 2,
+            },
+            576: {
+                items: 2,
+            },
+            768: {
+                items: 3,
+            },
+            992: {
+                items: 2,
+            },
+            1200: {
+                items: 2,
+            }
+        }
+    });
+
+    // Product Col2 Slider Js
+    var product = $(".product-col4-slider");
+    product.owlCarousel({
+        autoplay: false,
+        smartSpeed: 1000,
+        nav: true,
+        dots: false,
+        margin: 0,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            480: {
+                items: 1,
+            },
+            576: {
+                items: 2,
+            },
+            768: {
+                items: 2,
+            },
+            992: {
+                items: 3,
+            },
+            1200: {
+                items: 4,
+            }
+        }
+    });
+
+}
+
+function LoadData() {
+    RenderBoxList()
+}
+
 function ShowPopup() {
     var popupProduct = $(".popup-product-quickview");
 
@@ -66,7 +195,7 @@ function ShowPopup() {
     $("body").addClass("fix");
 }
 
-function RenderBoxList(data) {
+function RenderBoxList() {
     var itemHTML_1 = "", itemHTML_2 = "";
 
     data.forEach((obj) => {

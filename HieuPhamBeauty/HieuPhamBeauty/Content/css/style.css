@@ -1747,7 +1747,7 @@ section .container-fluid {
   bottom: -12px;
 }
 .header-area .header-middle {
-  border: 1px solid #ebebeb;
+  /*border: 1px solid #ebebeb;*/
   padding: 15px 0;
 }
 .header-area .header-middle .contact-link {
@@ -7473,6 +7473,7 @@ section .container-fluid {
 }
 .footer-area .about-widget .inner-content .footer-logo {
   margin-bottom: 22px;
+  width:max-content;
 }
 .footer-area .about-widget .widget-desc {
   max-width: 330px;
